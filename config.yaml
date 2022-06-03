@@ -1,0 +1,4 @@
+indico_instance: https://indico.hiskp.uni-bonn.de #For example https://indico.cern.ch/
+api_token: 
+start_date: 2022-05-01 #use yyyy-mm-dd format
+end_date: 2022-05-01 #use yyyy-mm-dd format
