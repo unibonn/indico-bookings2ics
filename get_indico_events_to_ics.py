@@ -99,10 +99,10 @@ def get_event(booking):
 
 def get_calendar(bookings):
     calendar = Calendar()
-    for booking in bookings:
-        booking = booking[0] #This is ugly and we could replace it by looping over map(lambda x: x[0], bookings) but it might be more portable
-        event = get_event(booking)
-        calendar.add_component(event)
+    for room_bookings in bookings:
+        for room_booking in room_bookings:
+            event = get_event(room_booking)
+            calendar.add_component(event)
     return calendar
 
 def save_calendar_to_file(calendar, room_id):
