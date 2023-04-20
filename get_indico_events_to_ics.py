@@ -99,10 +99,9 @@ def get_event(booking):
 
 def get_calendar(bookings):
     calendar = Calendar()
-    for booking in bookings:
-        list_of_events = range(len(booking)) #expect more than 1 event per room and day
-        for index in list_of_events:
-            event = get_event(booking[index])
+    for room_bookings in bookings:
+        for room_booking in room_bookings:
+            event = get_event(room_booking)
             calendar.add_component(event)
     return calendar
 
